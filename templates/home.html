@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Submission</title>
+</head>
+<body>
+    <h2>Student Data Submission</h2>
+    <form action="{{ url_for('predict_perfomance') }}" method="POST">
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <label for="race_ethnicity">Race/Ethnicity:</label>
+        <select name="ethnicity" id="race_ethnicity">
+            <option value="group A">Group A</option>
+            <option value="group B">Group B</option>
+            <option value="group C">Group C</option>
+            <option value="group D">Group D</option>
+            <option value="group E">Group E</option>
+        </select><br>
+
+        <label for="parental_level_of_education">Parental Level of Education:</label>
+        <select name="parental_level_of_education" id="parental_level_of_education">
+            <option value="associate's degree">Associate's Degree</option>
+            <option value="bachelor's degree">Bachelor's Degree</option>
+            <option value="high school">High School</option>
+            <option value="master's degree">Master's Degree</option>
+            <option value="some college">Some College</option>
+            <option value="some high school">Some High School</option>
+        </select><br>
+
+        <label for="lunch">Lunch:</label>
+        <select name="lunch" id="lunch">
+            <option value="free/reduced">Free/Reduced</option>
+            <option value="standard">Standard</option>
+        </select><br>
+
+        <label for="test_preparation_course">Test Preparation Course:</label>
+        <select name="test_preparation_course" id="test_preparation_course">
+            <option value="none">None</option>
+            <option value="completed">Completed</option>
+        </select><br>
+
+        <label for="reading_score">Reading Score:</label>
+        <input type="number" name="reading_score" id="reading_score" min="1" max="100"><br>
+
+        <label for="writing_score">Writing Score:</label>
+        <input type="number" name="writing_score" id="writing_score" min="1" max="100"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <h2>
+        THE  prediction is {{results}}
+    </h2>
+</body>
+</html>
