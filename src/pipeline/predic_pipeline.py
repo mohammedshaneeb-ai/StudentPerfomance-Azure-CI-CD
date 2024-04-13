@@ -6,7 +6,7 @@ from src.exception import CustomException
 class PredictPipeline:
     def __init__(self):
         pass
-
+        
     def predict(self,data):
         try:
             print("working predict class")
